@@ -1,14 +1,13 @@
 # MMFakeBench Home Page
 
-This is the repository that contains source code for the [MMFakeBench website](https://liuxuannan.github.io/MMFakeBench.github.io/).
+This is the repository that contains source code for the [Video-SafetyBench website](https://liuxuannan.github.io/Video-SafetyBench.github.io/).
 
-If you find MMFakeBench useful for your work please cite:
+If you find Video-SafetyBench useful for your work please cite:
 ```
-@article{liu2024mmfakebench,
-  title={MMFakeBench: A Mixed-Source Multimodal Misinformation Detection Benchmark for LVLMs},
-  author={Liu, Xuannan and Li, Zekun and Li, Peipei and Xia, Shuhan and Cui, Xing and Huang, Linzhi and Huang, Huaibo and Deng, Weihong and He, Zhaofeng},
-  journal={arXiv preprint arXiv:2406.08772},
-  year={2024}
+@misc{liu2025video-safetybench,
+      title={Video-SafetyBench: A Benchmark for Safety Evaluation of Video LVLMs}, 
+      author={Xuannan Liu and Zheqi He and Zekun Li and Peipei Li and Shuhan Xia and Xing Cui and Huaibo Huang and Xi Yang and Ran He},
+      year={2025}
 }
 ```
 
