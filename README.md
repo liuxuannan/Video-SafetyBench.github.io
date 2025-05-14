@@ -1,4 +1,4 @@
-# MMFakeBench Home Page
+# Video-SafetyBench Home Page
 
 This is the repository that contains source code for the [Video-SafetyBench website](https://liuxuannan.github.io/Video-SafetyBench.github.io/).
 
