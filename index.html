@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Video-SafetyBench: A Benchmark for Safety Evaluation of Video-Language Understanding">
+        content="Video-SafetyBench: A Benchmark for Safety Evaluation of Video LVLMs">
   <meta name="keywords" content="Multimodal Safety, Video Understanding">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Video-SafetyBench: A Benchmark for Safety Evaluation of Video-Language Understanding.</title>
+  <title>Video-SafetyBench: A Benchmark for Safety Evaluation of Video LVLMs.</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
@@ -78,7 +78,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Video-SafetyBench: A Benchmark for Safety Evaluation of Video-Language Understanding</h1>
+            <h1 class="title is-1 publication-title">Video-SafetyBench: A Benchmark for Safety Evaluation of Video LVLMs</h1>
 <!--            <h1 class="is-size-3"> ACM MM 2024 </h1>-->
             <div class="is-size-5 publication-authors">
               <span class="author-block">
@@ -152,7 +152,7 @@
               <!-- data Link. -->
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://huggingface.co/datasets/FlagEval/Video-SafetyBench/"
+                <a href="https://huggingface.co/datasets/BAAI/Video-SafetyBench"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
@@ -192,20 +192,22 @@
         <div class="content has-text-justified">
 
           <p>
-          Current multimodal misinformation detection (MMD) methods often assume a single source and type of forgery for each sample, which is insufficient for real-world scenarios where multiple forgery sources coexist. The lack of a benchmark for mixed-source misinformation has hindered progress in this field.
+          The increasing deployment of Large Vision-Language Models (LVLMs) raises safety concerns under potential malicious inputs. However, existing multimodal safety evaluations primarily focus on model vulnerabilities exposed by static image inputs, ignoring the temporal characteristics of video that may induce distinct safety risks.
           </p>
           <p>
-          To address this, we introduce MMFakeBench, the first comprehensive benchmark for mixed-source MMD. MMFakeBench includes 3 critical sources: textual veracity distortion, visual veracity distortion, and cross-modal consistency distortion, along with 12 sub-categories of misinformation forgery types.
+          To bridge this gap, we introduce Video-SafetyBench, the first comprehensive benchmark specifically designed to evaluate the safety of LVLMs when exposed to video attacks. It comprises 2,264 video-text pairs spanning 48 fine-grained safety categories, each pairing a synthesized video with either a harmful query, which contains explicit malice, or a benign query, which appears harmless but triggers harmful behavior when interpreted alongside the video.
           </p>
           <p>
-          We further conduct an extensive evaluation of 6 prevalent detection methods and 15 large vision-language models (LVLMs) on MMFakeBench under a zero-shot setting.
-          The results indicate that current methods struggle under this challenging and realistic mixed-source MMD setting.
+          To generate semantically accurate videos for safety evaluation, we design a controllable pipeline that decomposes video semantics into subject images and motion descriptions, which jointly guide the synthesis of query-relevant videos.
           </p>
           <p>
-          Additionally, we propose an innovative unified framework, which integrates rationales, actions, and tool-use capabilities of LVLM agents, significantly enhancing accuracy and generalization.
+          To effectively evaluate model responses in ambiguous or borderline cases, we propose RiskJudgeScore, a novel LLM-based metric that incorporates the confidence of judge models to quantify toxicity scores using token-level logit distributions.
           </p>
           <p>
-          We believe this study will catalyze future research into more realistic mixed-source multimodal misinformation and provide a fair evaluation of misinformation detection methods.
+          Finally, our evaluation of 24 state-of-the-art video LVLMs reveals consistent vulnerabilities to video-induced attacks.
+          </p>
+          <p>
+          We believe Video-SafetyBench will catalyze future research into safety evaluation and defense strategies tailored to the video modality.
           </p>
         </div>
       </div>
